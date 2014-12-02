@@ -16,7 +16,7 @@
           %td.content= truncate(post.content)
           %td.show-link= link_to 'Show', post
           %td.edit-link= link_to 'Edit', edit_post_path(post)
-          %td.delete-link= link_to 'Delete', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          %td.delete-link= link_to 'Delete', post, :method => :delete
 
   %br
 
