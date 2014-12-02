@@ -1,0 +1,10 @@
+.container
+  = link_to('&laquo; back to posts'.html_safe, posts_path, :id => 'back-link')
+
+  %h2 Editing post
+
+  = render 'form'
+
+  = link_to 'Show', @post
+  \|
+  = link_to 'Back', posts_path, :id => 'back-link'

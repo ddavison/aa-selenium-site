@@ -1,0 +1,23 @@
+.container
+  %h2 Blog posts
+
+  %table.table.table-striped#posts-table
+    %thead
+      %tr
+        %th Title
+        %th Content
+        %th
+        %th
+        %th
+    %tbody
+      - @posts.each do |post|
+        %tr.post
+          %td.title= post.title
+          %td.content= truncate(post.content)
+          %td.show-link= link_to 'Show', post
+          %td.edit-link= link_to 'Edit', edit_post_path(post)
+          %td.delete-link= link_to 'Delete', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+  %br
+
+  = link_to 'New Post', new_post_path

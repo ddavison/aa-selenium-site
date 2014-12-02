@@ -1,0 +1,16 @@
+.container
+  = link_to('&laquo; back to posts'.html_safe, posts_path, :id => 'back-link')
+
+  #post.container
+    %strong Title:
+    #title= @post.title
+
+    %br/
+
+    %strong Content:
+    #content
+      = @post.content
+
+  = link_to 'Edit', edit_post_path(@post), :id => 'edit-link'
+  \|
+  = link_to 'Delete', @post, :method => :delete, :data => { :confirm => 'Are you sure?' }

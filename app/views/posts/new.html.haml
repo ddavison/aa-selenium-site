@@ -1,0 +1,6 @@
+.container
+  = link_to('&laquo; back to posts'.html_safe, posts_path, :id => 'back-link')
+
+  %h1 New post
+
+  = render 'form'
